@@ -1,0 +1,202 @@
+/* Base styling */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  background: linear-gradient(135deg, #e2eafc, #cfd9df);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Input */
+#searchInput {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+/* Card grid */
+#userContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  max-width: 20rem;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+/* Card body */
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Button */
+.btn {
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3 !important;
+}
+
+/* Profile page */
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-container .card {
+  margin-top: 20px;
+}
+
+.profile-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Spinner */
+#spinner {
+  margin: 20px auto;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background: linear-gradient(135deg, #2b2b2b, #4a4a4a);
+  color: #f8f9fa;
+}
+
+body.dark-mode .card {
+  background-color: #3a3a3a;
+  color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+body.dark-mode input,
+body.dark-mode .form-check-label,
+body.dark-mode .form-check-input {
+  background-color: #3b3b3b;
+  color: #f8f9fa;
+  border: 1px solid #555;
+}
+
+/* Remove unwanted focus effects */
+body.dark-mode input:focus,
+body.dark-mode .form-check-input:focus,
+body.dark-mode .form-check-input:active,
+body.dark-mode .form-check-input:checked {
+  background-color: #3b3b3b !important;
+  border-color: #3b3b3b !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Spinner in dark mode */
+body.dark-mode .spinner-border {
+  border-top-color: #f8f9fa;
+}
+
+/* Reposition theme toggle button to far top right */
+#themeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  /* Increased font size for the symbol */
+  font-size: 1.2rem;
+  /* Retain existing styling */
+  padding: 5px 10px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(255,65,108,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,65,108,0.6);
+}
+
+/* Smooth transition utility */
+.theme-transition {
+  transition: background 1s ease, color 1s ease;
+}
+
+/* Favourite button styling */
+.fav-btn {
+  color: #ffc107;
+  border: 1px solid #ffc107;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.fav-btn:hover {
+  transform: scale(1.15);
+  background-color: rgba(255,193,7,0.2) !important;
+}
+.fav-btn:active {
+  transform: scale(0.9);
+}
+.fav-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Back to top button styling */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 40px;
+  }
+}

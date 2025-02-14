@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Directory</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-transition">
+  <div class="container">
+    <!-- Updated header with title on top and search/filter aligned below -->
+    <header class="mt-4 mb-4 text-center">
+      <h1 id="pageTitle">Staff Directory</h1>
+      <div class="mt-3">
+        <input type="text" id="searchInput" class="form-control mx-auto" style="max-width:300px;" placeholder="Search for users..." aria-label="Search users">
+      </div>
+      <div class="mt-2">
+        <div class="form-check d-inline-block">
+          <input class="form-check-input" type="checkbox" id="favouriteFilter" aria-label="Show favourites only">
+          <label class="form-check-label" for="favouriteFilter">Show Favourites Only</label>
+        </div>
+      </div>
+      <div class="mt-3 text-right">
+        <button id="themeToggle" class="btn" aria-label="Toggle dark mode">Switch to Dark Mode</button>
+      </div>
+    </header>
+    <div id="spinner" class="text-center my-3" style="display:none;">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div id="userContainer" class="row"><!-- User cards will appear here --></div>
+    <!-- Back to top button -->
+    <button id="backToTopBtn" title="Go to top">^</button>
+  </div>
+  <script src="js/favourites.js"></script>
+  <script src="js/userCard.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
